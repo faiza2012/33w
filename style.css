@@ -27,7 +27,10 @@ html {
 }
 
 * {
-  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
 }
 
 body {
@@ -46,58 +49,197 @@ body {
   margin: 0 auto;
 }
 
-/* ///////////////////////////// Layout .entete */
+.footer {
+  border-top: 1px solid #ddd;
+  background-color: blanchedalmond;
+  padding: 1.5rem 1rem;
+}
+.footer__contenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.footer__infos, .footer__reseaux, .footer__map {
+  flex: 1;
+  min-width: 250px;
+}
+.footer__reseaux p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.footer__icones {
+  display: flex;
+  gap: 0.75rem;
+}
+.footer__icones a img {
+  width: 24px;
+  height: 24px;
+}
+.footer__map iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+.footer__copyright {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+@media (max-width: 768px) {
+  .footer__contenu {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .footer__copyright {
+    margin-top: 1rem;
+  }
+}
+
 .entete {
   background-color: blanchedalmond;
-  /*  /////////////////////// Navigation */
+  padding: 0.5rem 2rem;
 }
 .entete__contenu {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .entete__logo {
-  width: 75px;
-  height: 75px;
+  height: 60px;
 }
-.entete__nav {
-  margin: 0 2rem 0 auto;
+.entete__droite {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 .entete__menu {
   display: flex;
-  list-style-type: none;
-  gap: 1rem;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
-.entete__menu-item a {
-  display: block;
-  background-color: beige;
+.entete__menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
 }
-.entete__menu-item a:hover {
-  background-color: rgb(233, 227, 177);
+.entete__menu a:hover {
+  background-color: darkorange;
+  color: white;
+}
+.entete__recherche {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.entete__recherche input {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.entete__recherche button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.entete__recherche img {
+  vertical-align: middle;
 }
 
 .hero {
   background-image: url("images/acores.jpg");
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-/* ////////////////////////////////  composants */
-/**
-/////////////////////////////// Compsant .recherche
-*/
-.recherche {
-  border: 1px solid #aaa;
-  display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
 }
-.recherche__input {
-  border: none;
-  outline: none;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
 }
-.recherche__bouton {
-  border-left: 1px solid #aaa;
+.hero__contenu {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 1.5rem;
+}
+.hero__titre {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+.hero__description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+.hero .hero__categories {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.hero .hero__categories button {
+  background-color: white;
+  border: 2px solid darkorange;
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.hero .hero__categories button:hover {
+  background-color: darkorange;
+  color: white;
+}
+
+.galerie {
+  background-color: #f9f4ef;
+  padding: 3rem 2rem;
+}
+.galerie__titre {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+.galerie__grille {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.galerie__grille img {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.galerie__grille img:hover {
+  transform: scale(1.03);
 }/*# sourceMappingURL=style.css.map */

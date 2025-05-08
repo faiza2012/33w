@@ -1,34 +1,66 @@
-/* ///////////////////////////// Layout .entete */
-
 .entete {
   background-color: blanchedalmond;
+  padding: 0.5rem 2rem;
+
   &__contenu {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
+
   &__logo {
-    width: 75px;
-    height: 75px;
+    height: 60px;
   }
-  /*  /////////////////////// Navigation */
-  &__nav {
-    margin: 0 2rem 0 auto;
-  }
-  &__menu {
-    // ul
+
+  &__droite {
     display: flex;
-    list-style-type: none;
-    gap: 1rem;
+    align-items: center;
+    gap: 2rem;
   }
-  &__menu-item {
-    //li
+
+  &__menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
 
     a {
-      display: block;
-      background-color: beige;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+
       &:hover {
-        background-color: rgb(233, 227, 177);
+        background-color: darkorange;
+        color: white;
       }
+    }
+  }
+
+  &__recherche {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    input {
+      padding: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    img {
+      vertical-align: middle;
     }
   }
 }

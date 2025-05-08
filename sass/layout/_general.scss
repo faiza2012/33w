@@ -8,8 +8,12 @@ html {
   box-sizing: inherit;
 }
 
+// _general.scss (ou ton fichier SCSS global)
 * {
-  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none; // pour supprimer les bordures par défaut
 }
 
 body {
@@ -27,4 +31,66 @@ body {
   box-sizing: border-box;
   max-width: 900px;
   margin: 0 auto;
+}
+.footer {
+  border-top: 1px solid #ddd;
+  background-color: blanchedalmond;
+  padding: 1.5rem 1rem;
+
+  &__contenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  &__infos,
+  &__reseaux,
+  &__map {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  &__reseaux p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  &__icones {
+    display: flex;
+    gap: 0.75rem;
+
+    a img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__map iframe {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  &__copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  @media (max-width: 768px) {
+    &__contenu {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    &__copyright {
+      margin-top: 1rem;
+    }
+  }
 }

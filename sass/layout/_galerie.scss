@@ -1,0 +1,33 @@
+.galerie {
+    background-color: #f9f4ef;
+    padding: 3rem 2rem;
+  
+    &__titre {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+  
+    &__grille {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+  
+      img {
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+  
