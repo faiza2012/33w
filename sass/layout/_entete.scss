@@ -8,24 +8,36 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__logo {
     height: 60px;
   }
 
-  &__droite {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  .chk__menu {
+    display: none;
+  }
+
+  &__burger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 
   &__menu {
     display: flex;
+    gap: 1rem;
     list-style: none;
-    gap: 1.5rem;
-    padding: 0;
     margin: 0;
+    padding: 0;
 
     a {
       text-decoration: none;
@@ -61,6 +73,20 @@
 
     img {
       vertical-align: middle;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__menu {
+      display: none;
+      flex-direction: column;
+      background-color: blanchedalmond;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .chk__menu:checked + .entete__burger + .entete__nav .entete__menu {
+      display: flex;
     }
   }
 }

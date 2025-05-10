@@ -1,21 +1,11 @@
-@charset "UTF-8";
 /*
-Theme Name: thème-33w-été25
-Theme URI: https://referenced.ca
-Author: Eddy Martin
-Author URI: https://github.com/eddytuto
-Description: Thème de base développer dans le cadre du cours de Worpress
+Theme Name: tp1_voyage
+Author: Faïza
+Description: Thème personnalisé pour le TP1 - Club de voyage.
 Version: 1.0
-Tested up to: 6.2
-Requires PHP: 7.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: club-voyage
 */
-/* Importation des  feuilles de style du thème */
-/* variables */
-/* Base */
-/* Layout */
+
+
 html {
   box-sizing: border-box;
 }
@@ -63,7 +53,9 @@ body {
   margin: 0 auto;
   gap: 2rem;
 }
-.footer__infos, .footer__reseaux, .footer__map {
+.footer__infos,
+.footer__reseaux,
+.footer__map {
   flex: 1;
   min-width: 250px;
 }
@@ -111,21 +103,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .entete__logo {
   height: 60px;
 }
-.entete__droite {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+.entete .chk__menu {
+  display: none;
+}
+.entete__burger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .entete__burger {
+    display: block;
+  }
 }
 .entete__menu {
   display: flex;
+  gap: 1rem;
   list-style: none;
-  gap: 1.5rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 .entete__menu a {
   text-decoration: none;
@@ -156,6 +160,18 @@ body {
 }
 .entete__recherche img {
   vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .entete__menu {
+    display: none;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    padding: 1rem;
+    width: 100%;
+  }
+  .entete .chk__menu:checked + .entete__burger + .entete__nav .entete__menu {
+    display: flex;
+  }
 }
 
 .hero {
@@ -242,4 +258,4 @@ body {
 }
 .galerie__grille img:hover {
   transform: scale(1.03);
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

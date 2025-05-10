@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Club de voyage</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script/chekbox.js" defer></script>
   </head>
   <body>
     <header class="entete">
@@ -12,7 +13,10 @@
         <img src="images/logo.png" class="entete__logo" alt="Logo club" />
 
         <div class="entete__droite">
-          <nav>
+          <input type="checkbox" id="chk__menu" class="chk__menu" />
+          <label for="chk__menu" class="entete__burger">☰</label>
+
+          <nav class="entete__nav">
             <ul class="entete__menu">
               <li><a href="#">Aventure</a></li>
               <li><a href="#">Culturel</a></li>
@@ -26,7 +30,6 @@
           <form class="entete__recherche">
             <input type="search" placeholder="Rechercher…" />
           </form>
-          
         </div>
       </div>
     </header>
@@ -35,9 +38,10 @@
       <div class="hero__contenu">
         <h1 class="hero__titre">Club de voyage</h1>
         <p class="hero__description">
-          Découvrez nos destinations exclusives autour du monde selon vos envies.
-          Accédez à des offres réservées uniquement à nos membres, dans des lieux
-          paisibles, aventureux ou culturels. Préparez-vous à vivre des expériences inoubliables !
+          Découvrez nos destinations exclusives autour du monde selon vos
+          envies. Accédez à des offres réservées uniquement à nos membres, dans
+          des lieux paisibles, aventureux ou culturels. Préparez-vous à vivre
+          des expériences inoubliables !
         </p>
         <div class="hero__categories">
           <button>Aventure</button>
@@ -58,14 +62,17 @@
         <img src="images/montagne.jpg" alt="Montagne verte" />
       </div>
     </section>
-    
+
     <footer class="footer">
       <div class="footer__contenu">
         <div class="footer__infos">
           <p><i class="fas fa-phone"></i> 1-888-CLUB-VOYAGE</p>
-          <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Voyage, Montréal, QC, CANADA</p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 123 Rue du Voyage, Montréal,
+            QC, CANADA
+          </p>
         </div>
-    
+
         <div class="footer__reseaux">
           <p>Suivez-nous :</p>
           <div class="footer__icones">
@@ -74,27 +81,23 @@
             <a href="#"><img src="images/tweeter.jpg" alt="Twitter" /></a>
           </div>
         </div>
-    
+
         <div class="footer__map">
           <iframe
             src="https://www.google.com/maps?q=Montréal,QC&output=embed"
             width="250"
             height="150"
-            style="border:0;"
+            style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
-    
+
       <div class="footer__copyright">
         © 2025 Club de voyage. Tous droits réservés.
       </div>
     </footer>
-    
-    
-    
   </body>
 </html>
-
