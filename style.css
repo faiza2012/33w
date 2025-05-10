@@ -3,8 +3,16 @@ Theme Name: tp1_voyage
 Author: Faïza
 Description: Thème personnalisé pour le TP1 - Club de voyage.
 Version: 1.0
+Theme URI: http://localhost/site_voyage/wp-content/themes/tp1_voyage/
+Author URI: https://github.com/toncompte
+Requires at least: 5.0
+Tested up to: 6.8
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tp1_voyage
+Tags: voyage, personnalisé, responsive
 */
-
 
 html {
   box-sizing: border-box;
@@ -258,4 +266,6 @@ body {
 }
 .galerie__grille img:hover {
   transform: scale(1.03);
-} /*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
